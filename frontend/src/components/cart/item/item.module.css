@@ -1,0 +1,11 @@
+.cart-item-container a{
+    color: unset;
+    text-decoration: none;
+}
+.cart-item-container a:hover{
+   cursor: pointer;
+}
+
+.cart-item-container i:hover{
+    cursor: pointer;
+}

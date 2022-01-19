@@ -1,0 +1,12 @@
+.min-height400{
+    min-height: 400px;
+}
+
+.product-item a{
+    text-decoration: none;
+    color: unset;
+}
+
+.product-item a:hover{
+    color: unset;
+}

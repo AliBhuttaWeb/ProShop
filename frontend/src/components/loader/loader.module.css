@@ -1,0 +1,13 @@
+.spinner-center{
+    text-align: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.spinner-center div[role='status']{
+    height: 100px;
+    width: 100px;
+}
