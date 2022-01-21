@@ -8,7 +8,8 @@ const productPublicRoutes = require('./routes/public_routes/product.route');
 const userPublicRoutes = require('./routes/public_routes/user.route');
 const userAuthRoutes = require('./routes/auth_routes/user.route');
 const orderAuthRoutes = require('./routes/auth_routes/order.route');
-const userAuthAdminRoutes = require('./routes/auth_admin_routes/auth.routes');
+const userAuthAdminRoutes = require('./routes/auth_admin_routes/user.routes');
+const orderAuthAdminRoutes = require('./routes/auth_admin_routes/order.routes');
 
 dotenv.config();//Configuring dotenv to communicate with .env file
 ConnectDB();//Establishing connection with DB
@@ -26,7 +27,7 @@ app.use('/api/admin/users', userAuthAdminRoutes);
 
 /* ** Order Routes ** */
 app.use('/api/orders' , orderAuthRoutes);
-
+app.use('/api/admin/orders', orderAuthAdminRoutes);
 //Route not found handling
 app.use(async (req, res) => {
     res.json(Response.error(NOT_FOUND, ROUTE_NOT_FOUND_MSG));

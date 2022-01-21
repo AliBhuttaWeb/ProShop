@@ -33,7 +33,7 @@ export const Header = () => {
                                 {
                                     user.is_admin && (
                                         <>
-                                            <LinkContainer to="/dashboard">
+                                            <LinkContainer to="/admin/dashboard">
                                                     <NavDropdown.Item > Dashboard </NavDropdown.Item>
                                             </LinkContainer>
                                             <NavDropdown.Divider />

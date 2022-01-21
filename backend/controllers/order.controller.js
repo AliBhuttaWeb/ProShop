@@ -94,3 +94,16 @@ exports.updateOrderPaymentDetail = async(req, res) => {
         return res.send(Response.error(code, message));
     }
 }
+
+exports.getOrders = async(req, res) => {
+    try{
+        const orders = await Order.find({}).populate('user', 'name');
+        const data = {"orders": orders};
+        return res.json(Response.success(data));
+    }catch(error){
+        Log.error(error.stack);
+        const code = Constant.SERVER_ERROR;
+        const msg  = Constant.SERVER_ERR_MSG;
+        return res.json(Response.error(code, msg));
+    }
+}

@@ -143,3 +143,28 @@ exports.getUsers = async(req, res) => {
         return res.json(Response.error(code, msg));
     }
 }
+
+exports.deleteUser = async(req, res) => {
+    try{
+        const user = await User.findById(req.params.id).remove();
+        if(!user.deletedCount){
+            const code = Constant.UNPROCESSABLE_ENTITY;
+            const msg  = Constant.USER_NOT_DELETED;
+            return res.json(Response.error(code, msg));
+        }
+        
+        const data = {};
+        const msg  = Constant.USER_DELETED;
+        return res.json(Response.success(data, msg));
+    }catch(error){
+        Log.error(error.stack);
+        if(error.message.indexOf('Cast to ObjectId failed') !== -1 ){
+            code = Constant.NOT_FOUND;
+            message =  Constant.USER_NOT_FOUND;
+        }else{
+            code = Constant.SERVER_ERROR;
+            message = Constant.SERVER_ERR_MSG;
+        }
+        return res.json(Response.error(code, message));
+    }
+}

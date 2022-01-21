@@ -6,6 +6,10 @@ import { ProductDetailReducer } from './products/product_detail.reducer';
 import { UserLoginReducer } from "./users/login.reducer";
 import { UserRegisterReducer } from "./users/register.reducer";
 import { OrderDetailReducer } from './orders/order_detail.reducer';
+import { AdminUserListReducer } from "./admin_reducers/user/user_list.reducer";
+import { AdminOrderListReducer } from './admin_reducers/order/order_list.reducer';
+import { AdminUserDeleteReducer } from './admin_reducers/user/user_delete.reducer';
+
 
 const rootReducer = combineReducers({
     productsList: ProductsListReducer,
@@ -14,7 +18,10 @@ const rootReducer = combineReducers({
     userLogin: UserLoginReducer,
     userRegister: UserRegisterReducer,
     orderCreate:OrderCreateReducer,
-    orderDetail: OrderDetailReducer
+    orderDetail: OrderDetailReducer,
+    adminUsers: AdminUserListReducer,
+    adminOrders: AdminOrderListReducer,
+    adminUserDelete: AdminUserDeleteReducer
 });
 
 export default rootReducer;

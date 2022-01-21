@@ -21,7 +21,10 @@ const Constant = {
     "ORDER_NOT_CREATED": "Order couldn't be create, please try again a bit later",
     "ORDER_NOT_FOUND": "Order not found",
     "PAYMENT_DETAIL_NOT_UPDATED": "Payment detail couldn't updated, please try again a bit later",
-    "NOT_AUTHORIZED_TO_PERFORM_ACTION": "You don't have right to perform this action"
+    "NOT_AUTHORIZED_TO_PERFORM_ACTION": "You don't have right to perform this action",
+    "USER_NOT_DELETED": "User couldn't be deleted, please try again a bit later",
+    "USER_NOT_FOUND": "User not found",
+    "USER_DELETED": "User deleted successfully"
 }
 
 module.exports = Constant;

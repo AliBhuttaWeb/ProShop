@@ -26,9 +26,10 @@ class Response{
         this.errors = [];
     }
 
-    static success(data){
+    static success(data, message = ""){
         this.resetResponse();
         this.data = data;
+        this.message = message;
         return this.response();
     }
 
