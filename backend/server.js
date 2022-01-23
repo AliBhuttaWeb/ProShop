@@ -38,6 +38,10 @@ app.use('/api/admin/orders', orderAuthAdminRoutes);
 /* ** Upload Routes** */
 app.use('/api/admin/upload', uploadAuthRoutes);
 
+/* ** Retrieving Image ** */
+app.get('/image/:name', (req, res) => {
+    res.sendFile(path.join(__dirname, `../public/uploads/images/${req.params.name}`));
+});
 
 //Route not found handling
 app.use(async (req, res) => {
