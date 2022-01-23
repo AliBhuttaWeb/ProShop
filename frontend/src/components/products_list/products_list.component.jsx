@@ -10,12 +10,12 @@ export const ProductsList = () => {
   
     const { products, error, is_loading} = useSelector(state => state.productsList);
    
-    const dispath = useDispatch();  
+    const dispatch = useDispatch();  
     
 
     useEffect(() => {   
-        dispath(fetchProductsList());
-    },[dispath]);
+        dispatch(fetchProductsList());
+    },[dispatch]);
 
     return <>
         <h1>Latest Products</h1>

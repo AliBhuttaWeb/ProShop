@@ -1,10 +1,14 @@
 .spinner-center{
     text-align: center;
-    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    height: 100%;
     width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
 }
 
 .spinner-center div[role='status']{

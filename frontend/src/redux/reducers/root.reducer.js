@@ -9,6 +9,7 @@ import { OrderDetailReducer } from './orders/order_detail.reducer';
 import { AdminUserListReducer } from "./admin_reducers/user/user_list.reducer";
 import { AdminOrderListReducer } from './admin_reducers/order/order_list.reducer';
 import { AdminUserDeleteReducer } from './admin_reducers/user/user_delete.reducer';
+import { AdminImageUploadReducer } from "./admin_reducers/upload/image_upload/image_upload.reducer";
 
 
 const rootReducer = combineReducers({
@@ -21,7 +22,8 @@ const rootReducer = combineReducers({
     orderDetail: OrderDetailReducer,
     adminUsers: AdminUserListReducer,
     adminOrders: AdminOrderListReducer,
-    adminUserDelete: AdminUserDeleteReducer
+    adminUserDelete: AdminUserDeleteReducer,
+    adminImageUpload: AdminImageUploadReducer
 });
 
 export default rootReducer;
