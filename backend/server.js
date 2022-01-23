@@ -39,7 +39,7 @@ app.use('/api/admin/orders', orderAuthAdminRoutes);
 app.use('/api/admin/upload', uploadAuthRoutes);
 
 /* ** Retrieving Image ** */
-app.get('/image/:name', (req, res) => {
+app.get('/image/:name', (req, res) => { //Accessing image example <img src="/image/profile.png" />
     res.sendFile(path.join(__dirname, `../public/uploads/images/${req.params.name}`));
 });
 
