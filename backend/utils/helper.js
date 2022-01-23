@@ -1,5 +1,7 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const multer  = require('multer')
+const path    = require('path');
 
 exports.passwordMatched = (enteredPassword, dbPassword) => {
     const result = bcrypt.compare(enteredPassword, dbPassword);
@@ -20,3 +22,18 @@ exports.decodeToken = (token) => {
 exports.encodePassword = (password) => {
     return bcrypt.hashSync(password, 10);
 }
+
+// exports.uploadFile = () => {
+//     const storage = multer.diskStorage({
+//         destination: function (req, file, cb) {
+//             cb(null, './public/uploads/images/')
+//         },
+
+//         filename: function (req, file, cb) {
+//             const uniqueSuffix = Date.now() + Math.round(Math.random() * 1E9)
+//             cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname));
+//         }
+//     });
+//     const upload = multer({ storage: storage });
+//     return upload;
+// }

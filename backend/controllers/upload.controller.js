@@ -4,8 +4,9 @@ const Log      = require('../utils/logger');
 
 exports.uploadProductImage = async(req, res) => {
     try{
-        const data = {"file-name": req.file.filename, path: req.file.path};
-        return res.json(Response.success(data));
+        const data = { filename: req.file.filename, path: req.file.path };
+        const msg  = Constant.IMAGE_UPLOADED;
+        return res.json(Response.success(data, msg));
     }catch(error){
         Log.error(error.stack);
         const code = Constant.SERVER_ERROR;

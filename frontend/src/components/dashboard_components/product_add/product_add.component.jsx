@@ -21,6 +21,7 @@ export const ProductAdd = () => {
         const image = e.target.files[0];
         const formData = new FormData();
         formData.append('image', image);
+        formData.append('name', "Iphone 13 pro max");
         console.log("file", formData);
         dispatch(uploadImage(formData));
     }

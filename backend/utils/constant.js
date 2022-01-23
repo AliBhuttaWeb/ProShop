@@ -24,7 +24,8 @@ const Constant = {
     "NOT_AUTHORIZED_TO_PERFORM_ACTION": "You don't have right to perform this action",
     "USER_NOT_DELETED": "User couldn't be deleted, please try again a bit later",
     "USER_NOT_FOUND": "User not found",
-    "USER_DELETED": "User deleted successfully"
+    "USER_DELETED": "User deleted successfully",
+    "IMAGE_UPLOADED": "Image uploaded successfully!"
 }
 
 module.exports = Constant;
